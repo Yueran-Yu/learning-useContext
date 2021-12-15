@@ -1,9 +1,8 @@
 import React from 'react';
-import {useTheme, useThemeUpdate} from "./ThemeContext";
+import {useThemeContext} from "./ThemeContext";
 
 const FunctionContextComponent = () => {
-  const darkTheme = useTheme()
-  const toggleTheme = useThemeUpdate()
+  const {darkTheme,toggleTheme} = useThemeContext()
 
   const themeStyles = {
     backgroundColor: darkTheme ? '#333' : '#CCC',
